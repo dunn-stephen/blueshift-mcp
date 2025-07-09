@@ -31,7 +31,7 @@ npm run build
 
 2. **Create your accounts configuration:**
 
-Create `accounts.json` with your Blueshift credentials:
+Create `accounts.json` in the project root directory (next to `package.json`) with your Blueshift credentials:
 ```json
 {
   "accounts": {
@@ -65,7 +65,7 @@ Add to your Claude Desktop configuration:
       "command": "node",
       "args": ["/absolute/path/to/blueshift-mcp/dist/index.js"],
       "env": {
-        "BLUESHIFT_ACCOUNTS_CONFIG": "/absolute/path/to/accounts.json",
+        "BLUESHIFT_ACCOUNTS_CONFIG": "/absolute/path/to/blueshift-mcp/accounts.json",
         "DEBUG": "false"
       }
     }
@@ -221,9 +221,10 @@ npm run build
 ## Troubleshooting
 
 ### Server Won't Start
-- Check that `accounts.json` exists at the specified path
+- Check that `accounts.json` exists in the project root directory (same level as `package.json`)
 - Verify the JSON syntax is valid
 - Ensure all required API keys are present
+- Confirm the `BLUESHIFT_ACCOUNTS_CONFIG` environment variable points to the correct file path
 
 ### Authentication Errors
 - Verify your API keys are correct
