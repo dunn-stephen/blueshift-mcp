@@ -23,8 +23,8 @@ A Model Context Protocol (MCP) server that provides a unified interface for inte
 
 1. **Clone and build the project:**
 ```bash
-git clone <repository-url>
-cd blueshift-mcp-server
+git clone https://github.com/dunn-stephen/blueshift-mcp.git
+cd blueshift-mcp
 npm install
 npm run build
 ```
@@ -63,7 +63,7 @@ Add to your Claude Desktop configuration:
   "mcpServers": {
     "blueshift": {
       "command": "node",
-      "args": ["/absolute/path/to/blueshift-mcp-server/dist/index.js"],
+      "args": ["/absolute/path/to/blueshift-mcp/dist/index.js"],
       "env": {
         "BLUESHIFT_ACCOUNTS_CONFIG": "/absolute/path/to/accounts.json",
         "DEBUG": "false"
